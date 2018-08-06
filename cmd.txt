@@ -1,0 +1,34 @@
+
+内置测试
+php artisan tinker
+
+使用 PHP 内置的开发服务器启动应用
+php artisan serve
+
+查看laravel版本
+php artisan --version
+
+列出所有的路由
+php artisan route:list
+
+创建控制器
+php artisan make:controller StudentController
+
+创建Rest风格资源控制器（带有index、create、store、edit、update、destroy、show方法）
+php artisan make:controller PhotoController --resource
+
+创建模型
+php artisan make:model Student
+
+创建新建表的迁移和修改表的迁移
+php artisan make:migration create_users_table --create=students //创建students表
+php artisan make:migration add_votes_to_users_table --table=students//给students表增加votes字段
+
+执行迁移
+php artisan migrate
+回滚
+php artisan migrate:rollback
+
+生成路由缓存以及移除缓存路由文件
+php artisan route:cache
+php artisan route:clear
